@@ -4,12 +4,14 @@ def build_prompt(user_question, context, history):
     conversation_memory = ""
 
     for turn in recent_history:
-        # Case 1: (user, assistant)
+        # Case 1: (user, assistant) as tuple
+        # gradio chat format
         if isinstance(turn, (list, tuple)) and len(turn) == 2:
             user, assistant = turn
             conversation_memory += f"User: {user}\nAssistant: {assistant}\n"
 
-        # Case 2: {"role": "...", "content": "..."}
+        # Case 2: {"role": "...", "content": "..."}. as dict
+        # watsonx chat format
         elif isinstance(turn, dict):
             role = turn.get("role")
             content = turn.get("content")
