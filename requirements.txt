@@ -1,0 +1,27 @@
+# ---------- Core Python ----------
+python-dotenv
+
+# ---------- Data Handling ----------
+pandas
+numpy
+regex
+
+# ---------- HuggingFace / NLP ----------
+datasets
+transformers
+sentence-transformers
+huggingface-hub
+
+# ---------- Vector DB & RAG ----------
+pymilvus
+langchain
+langchain-community
+
+# ---------- IBM watsonx ----------
+ibm-watsonx-ai
+
+# ---------- UI / Chat ----------
+gradio
+
+# ---------- Utilities ----------
+tqdm
