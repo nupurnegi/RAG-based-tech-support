@@ -1,10 +1,20 @@
-from config import MILVUS_TOKEN, MILVUS_URL, COLLECTION_NAME
+import sys
+import os
+
+# Adding the parent directory to the search path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from app.config import MILVUS_TOKEN, MILVUS_URL, COLLECTION_NAME
 
 from pymilvus import (
-    connections, FieldSchema, CollectionSchema, DataType, Collection
+    connections, FieldSchema, CollectionSchema, DataType, Collection, utility
 )
 
-from data_loader import load_ubuntu_dataset
+# from data_loader import load_ubuntu_dataset
+from data_embedding import questions, answers
+# dataset=load_ubuntu_dataset()
+# dataset.head()
+
 from data_embedding import embeddings
 
 fields = [
@@ -18,18 +28,45 @@ fields = [
 schema = CollectionSchema(fields, description="Ubuntu RAG chatbot")
 
 connections.connect(
-  uri=MILVUS_TOKEN,
-  token=MILVUS_URL
+  uri=MILVUS_URL,
+  token=MILVUS_TOKEN
 )
+
+if utility.has_collection(COLLECTION_NAME):
+    utility.drop_collection(COLLECTION_NAME)
 
 collection = Collection(
     name=COLLECTION_NAME,
     schema=schema
 )
 
+print(embeddings.shape)
+print(collection.schema)
+
 
 collection.insert([
-    load_ubuntu_dataset["instruction"].tolist(),
-    embeddings.tolist(),
-    load_ubuntu_dataset["response"].tolist()
+    questions,
+    embeddings.astype("float32").tolist(),
+    answers
 ])
+
+collection.flush()
+
+print(collection.num_entities)
+
+index_params = {
+    "index_type": "HNSW",
+    "metric_type": "IP",   # cosine similarity
+    "params": {
+        "M": 16,
+        "efConstruction": 200
+    }
+}
+
+collection.create_index(
+    field_name="embedding",
+    index_params=index_params
+)
+
+collection.load()
+print("Index created")

@@ -1,7 +1,9 @@
-from langchain_community.vectorstores import Milvus
+from langchain_milvus import Milvus
 from langchain_huggingface import HuggingFaceEmbeddings
 
-from config import EMBEDDING_MODEL_NAME, COLLECTION_NAME, MILVUS_URL, MILVUS_TOKEN
+import os,sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from app.config import EMBEDDING_MODEL_NAME, COLLECTION_NAME, MILVUS_URL, MILVUS_TOKEN
 
 def get_vectorstore():
     embedding_fn = HuggingFaceEmbeddings(

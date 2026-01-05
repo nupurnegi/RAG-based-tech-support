@@ -11,8 +11,4 @@
 #             texts=docs[i:i+batch_size],
 #             metadatas=metadatas[i:i+batch_size]
 #         )   
-
-
-
-
         

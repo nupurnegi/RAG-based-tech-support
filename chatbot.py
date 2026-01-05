@@ -1,7 +1,10 @@
 import gradio as gr
 import time
 
-import generator.llm as llm
+import os,sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from generator.llm import load_llm
 from generator.prompt_builder import build_prompt
 from retriever.retriever import retrieve_context
 from retriever.vector_store import get_vectorstore
@@ -18,7 +21,7 @@ def stream_response(message, history):
         history=history
     )
 
-    response = llm.generate_text(prompt, guardrails=True)
+    response = load_llm().generate_text(prompt)
 
     partial = ""
     for token in response.split():
