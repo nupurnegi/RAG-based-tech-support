@@ -11,6 +11,6 @@ def intent_llm():
         project_id=PROJECT_ID,
         params={
             "temperature": 0.2,
-            "max_new_tokens": 50
+            "max_new_tokens": 100
         }
     )
