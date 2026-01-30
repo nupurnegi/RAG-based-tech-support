@@ -11,6 +11,6 @@ def load_llm():
         project_id=PROJECT_ID,
         params={
             "temperature": 0.2,
-            "max_new_tokens": 400
+            "max_new_tokens": 50
         }
     )

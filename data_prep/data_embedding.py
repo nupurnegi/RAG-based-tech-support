@@ -9,8 +9,8 @@ embedder = SentenceTransformer(EMBEDDING_MODEL_NAME)
 
 dataset = load_ubuntu_dataset()
 questions, answers = preprocess_dataset(dataset)
-print(max(len(q) for q in questions))
-print(max(len(a) for a in answers))
+# print(max(len(q) for q in questions))
+# print(max(len(a) for a in answers))
 
 # questions = questions
 
