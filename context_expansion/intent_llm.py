@@ -2,7 +2,7 @@ from ibm_watsonx_ai.foundation_models import Model
 
 import os,sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from app.config import PROJECT_ID, WATSONX_CREDENTIALS, WATSONX_MODEL_ID
+from app.config import PROJECT_ID, WATSONX_CREDENTIALS, WATSONX_INTENT_MODEL_ID, WATSONX_MODEL_ID
 
 def intent_llm():
     return Model(
@@ -10,7 +10,8 @@ def intent_llm():
         credentials=WATSONX_CREDENTIALS,
         project_id=PROJECT_ID,
         params={
-            "temperature": 0.2,
-            "max_new_tokens": 100
+            "temperature": 0.0,
+            "top_p": 0.1,
+            "max_new_tokens": 80
         }
     )

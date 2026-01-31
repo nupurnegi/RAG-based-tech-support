@@ -10,25 +10,36 @@ from generator.prompt_builder import build_prompt
 from retriever.retriever import retrieve_context
 from retriever.vector_store import get_vectorstore
 
+# def is_obviously_clear(query: str) -> bool:  # bypass Gatekeeper (analyze_intent). Its marking all query AMBIGUOUS
+#     return len(query.split()) >= 4
+
 def chatbot_router(message, history):
+
+    # if is_obviously_clear(message):
+    #     return stream_response(message, history)
+    print("chatbot_router")
     intent = analyze_intent(message)
-
+    
     if intent["status"] == "AMBIGUOUS":
-        return intent["follow_up_question"]
-
-    return stream_response(message, history)
-
+        print("AMBIGUOUS")
+        yield intent["follow_up_question"]
+        return
+    # if intent["status"] == "CLEAR":
+    #     return stream_response(message, history)
+    print("CLEAR")
+    for chunk in stream_response(message, history):
+        yield chunk
 
 def stream_response(message, history):
     if not message:
-        return ""
-    
-    # intent = analyze_intent(message) 
-    # if intent["status"] == "AMBIGUOUS":
-    #     return intent["follow_up_question"][0]
+        yield ""
+        return
 
+    print("stream_response")
+    context, top_similarity_score = retrieve_context(get_vectorstore(), message)
 
-    context = retrieve_context(get_vectorstore(), message)
+    # if top_similarity_score < 0.3:
+    #     return chatbot_router()
 
     prompt = build_prompt(
         user_question=message,
@@ -37,6 +48,7 @@ def stream_response(message, history):
     )
 
     response = generator_llm().generate_text(prompt)
+    print(response)
 
     partial = ""
     for token in response.split():

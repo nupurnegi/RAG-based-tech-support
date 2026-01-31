@@ -25,17 +25,23 @@ def build_prompt(user_question, context, history):
 
 
     prompt = f"""
-You are a tech support assistant. Use ONLY the context to help the user. Also keep track of the conversation.
+    You are a tech support assistant. Use ONLY the context to help the user. Also keep track of the conversation.
 
-Conversation History:
-{conversation_memory}
+    The USER QUERY describes the actual issue to solve.
+    The RETRIEVED CONTEXT is ONLY background reference material. 
+    Do NOT assume the user's issue matches the retrieved context exactly.
+    Do NOT restate problems from the retrieved context.
 
-Retrieved Context:
-{context}
+    Conversation History:
+    {conversation_memory}
 
-User Query:
-{user_question}
+    Retrieved Context:
+    {context}
 
-Answer clearly and concisely as a tech support assistant.
-"""
+    User Query:
+    {user_question}
+
+    Answer clearly and concisely as a tech support assistant.
+    """
+    print(prompt)
     return prompt.strip()
