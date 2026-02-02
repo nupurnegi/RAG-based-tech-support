@@ -1,0 +1,9 @@
+[
+  {
+    "id": "Q1",
+    "query": "I am not able to install python 2.6 on my Ubuntu system",
+    "context": "User: im compilling and i have the follow prob configure error could not find python headers what i need to install to fix this\\Assistant: pythondev as mentioned earlier sudo aptitude install pythondev\n\nUser: anybody can help me i need install program that required python 24 but in my system is already installed python 266 and i cant compile program what a best way to solve this problem\\Assistant: i once managed to solve something like that by making symlinks but maybe thats a bit stupid way to fix it\n\nUser: i am having trouble installing a program on ubuntu can anyone help\\Assistant: im yet to successfully sompile an app so i probably cant help\n\nUser: how do i install python 26 this one didnt exist sudo aptget install python26 is there a way to upgrade from 25 to 26 maybe its easier for my case or\\Assistant: if youre using hardy then youll need to find a ppa im not sure once exists though since python is rather integral to ubuntu",
+    "answer": "\n\nAssistant: It seems like you're encountering issues with Python installation on your Ubuntu system. If you're trying to install Python 2.6, it's important to note that Ubuntu doesn't have a direct upgrade path from Python 2.5 to 2.6. You might need to add a Personal Package Archive (PPA) to your system. However, finding a PPA for Python 2.6 might be challenging as it's quite old.\n",
+    "similarity": 0.5970863699913025
+  }
+]

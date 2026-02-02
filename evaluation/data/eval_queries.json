@@ -1,0 +1,74 @@
+[
+  {
+    "id": "Q1",
+    "query": "I am not able to install python on my Ubuntu system"
+  },
+  {
+    "id": "Q2",
+    "query": "Ubuntu is not connecting to WiFi"
+  },
+  {
+    "id": "Q3",
+    "query": "My Ubuntu system won't boot after update"
+  },
+  {
+    "id": "Q4",
+    "query": "How do I fix 'Broken Packages' errors when running apt update?"
+  },
+  {
+    "id": "Q5",
+    "query": "My Bluetooth device is paired but there is no sound coming through."
+  },
+  {
+    "id": "Q6",
+    "query": "I am getting a 'disk space low' warning on my root partition."
+  },
+  {
+    "id": "Q7",
+    "query": "How can I enable and configure the UFW firewall for SSH?"
+  },
+  {
+    "id": "Q8",
+    "query": "The touchpad on my laptop is not working after installing Ubuntu."
+  },
+  {
+    "id": "Q9",
+    "query": "How do I reset my forgotten sudo password?"
+  },
+  {
+    "id": "Q10",
+    "query": "My screen is flickering after installing the latest NVIDIA drivers."
+  },
+  {
+    "id": "Q11",
+    "query": "How can I share a folder with a Windows machine using Samba?"
+  },
+  {
+    "id": "Q12",
+    "query": "The system is running very slowly; how do I find which process is using the CPU?"
+  },
+  {
+    "id": "Q13",
+    "query": "How do I add a PPA repository for a specific software like OBS Studio?"
+  },
+  {
+    "id": "Q14",
+    "query": "Can you help me set up a static IP address on Ubuntu 24.04?"
+  },
+  {
+    "id": "Q15",
+    "query": "How do I change the default Java version using update-alternatives?"
+  },
+  {
+    "id": "Q16",
+    "query": "My external hard drive is not mounting automatically on boot."
+  },
+  {
+    "id": "Q17",
+    "query": "How do I check the system logs to troubleshoot a recent application crash?"
+  },
+  {
+    "id": "Q18",
+    "query": "What is the command to create a compressed backup of my home directory?"
+  }
+]
