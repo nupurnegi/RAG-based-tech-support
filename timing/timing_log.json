@@ -1,0 +1,48 @@
+[
+  {
+    "timestamp": "2026-02-17T18:19:59.030968",
+    "query": "Can't connect to Bluetooth device",
+    "status": "CLEAR",
+    "intent_time": 3.541,
+    "retrieval_time": 13.165,
+    "generation_time": 3.189,
+    "total_time": 19.896,
+    "similarity_score": 0.6108,
+    "confidence_level": "Medium",
+    "num_sources": 8
+  },
+  {
+    "timestamp": "2026-02-17T18:20:47.389960",
+    "query": "Recommend a good movie",
+    "status": "AMBIGUOUS",
+    "intent_time": 3.526,
+    "retrieval_time": 0.0,
+    "generation_time": 0.0,
+    "total_time": 3.526,
+    "similarity_score": null,
+    "confidence_level": null
+  },
+  {
+    "timestamp": "2026-02-17T18:21:03.093516",
+    "query": "No\n",
+    "status": "AMBIGUOUS",
+    "intent_time": 4.323,
+    "retrieval_time": 0.0,
+    "generation_time": 0.0,
+    "total_time": 4.323,
+    "similarity_score": null,
+    "confidence_level": null
+  },
+  {
+    "timestamp": "2026-02-17T18:23:36.974670",
+    "query": "How to update Ubuntu from terminal?",
+    "status": "CLEAR",
+    "intent_time": 3.176,
+    "retrieval_time": 13.118,
+    "generation_time": 5.53,
+    "total_time": 21.825,
+    "similarity_score": 0.9312,
+    "confidence_level": "High",
+    "num_sources": 8
+  }
+]

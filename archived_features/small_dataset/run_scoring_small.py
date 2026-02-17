@@ -1,10 +1,10 @@
 """
-Scoring script for evaluating RAG system performance.
+Scoring script for RAG system evaluation - SMALL DATASET VERSION.
 
-This script:
-1. Loads generated results
-2. Calculates multiple metrics for each result
-3. Saves scored results with metrics
+This script scores results from the small dataset (5 queries).
+
+Usage:
+    python evaluation/run_scoring_small.py
 """
 
 import json
@@ -94,22 +94,22 @@ def score_single_result(item):
 
 if __name__ == "__main__":
     # Load results - handle both running from root and from evaluation directory
-    if os.path.exists("evaluation/results.json"):
-        results_file = "evaluation/results.json"
-        output_file = "evaluation/scored_results.json"
-    elif os.path.exists("results.json"):
-        results_file = "results.json"
-        output_file = "scored_results.json"
+    if os.path.exists("evaluation/results_small.json"):
+        results_file = "evaluation/results_small.json"
+        output_file = "evaluation/scored_results_small.json"
+    elif os.path.exists("results_small.json"):
+        results_file = "results_small.json"
+        output_file = "scored_results_small.json"
     else:
-        print(f"ERROR: results.json not found!")
-        print("Please run 'python evaluation/run_generation.py' first.")
+        print(f"ERROR: results_small.json not found!")
+        print("Please run 'python evaluation/run_generation_small.py' first.")
         sys.exit(1)
     
     print(f"Loading results from {results_file}...")
     with open(results_file) as f:
         results = json.load(f)
     
-    print(f"Found {len(results)} results to score")
+    print(f"Found {len(results)} results to score (SMALL DATASET)")
 
     scored_results = []
 
@@ -144,3 +144,5 @@ if __name__ == "__main__":
         if values:
             avg_metrics[metric] = sum(values) / len(values)
             print(f"{metric.replace('_', ' ').title()}: {avg_metrics[metric]:.3f}")
+
+# Made with Bob

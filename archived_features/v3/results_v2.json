@@ -1,0 +1,164 @@
+[
+  {
+    "id": "Q1",
+    "query": "I am not able to install python on my Ubuntu system",
+    "context": "",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.0,
+    "support_score": 0.0,
+    "validation_passed": false
+  },
+  {
+    "id": "Q2",
+    "query": "Ubuntu is not connecting to WiFi",
+    "context": "User: hi can anyone help me with setting up a wireless connection in ubuntu its not connecting and i cant figure out why\nAssistant: try iwlist eth1 scanning or eth0 or wlan0 whatever your wlan device is\n\nUser: i cant get my broadcom wlan to work with wpa\nAssistant: terminal wpapassphrase your network ssid passphrase",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.7161628007888794,
+    "support_score": 0.08333333333333333,
+    "validation_passed": false
+  },
+  {
+    "id": "Q3",
+    "query": "My Ubuntu system won't boot after update",
+    "context": "",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.0,
+    "support_score": 0.0,
+    "validation_passed": false
+  },
+  {
+    "id": "Q4",
+    "query": "How do I fix 'Broken Packages' errors when running apt update?",
+    "context": "User: how do i repair broken packages\nAssistant: try go to system administration synaptic package manager and click edit fix broken packages or sudo aptget f install",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.7214162349700928,
+    "support_score": 0.16666666666666666,
+    "validation_passed": false
+  },
+  {
+    "id": "Q5",
+    "query": "My Bluetooth device is paired but there is no sound coming through.",
+    "context": "",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.0,
+    "support_score": 0.0,
+    "validation_passed": false
+  },
+  {
+    "id": "Q6",
+    "query": "I am getting a 'disk space low' warning on my root partition.",
+    "context": "",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.0,
+    "support_score": 0.0,
+    "validation_passed": false
+  },
+  {
+    "id": "Q7",
+    "query": "How can I enable and configure the UFW firewall for SSH?",
+    "context": "User: hello im trying to setup ssh access from an external network locally it works fine ive also successfully configured dyndns ive opened up the necessary ports on ufw forwarded the ports in the router and made a port scan to verify the service is listening but i still get a connection refused what am i missing here is there a setting that is on that will only allow ssh connections from the local network\nAssistant: probably ssh is not installed on the target system sudo aptitude install ssh\n\nUser: if i want to setup ssh on ubuntu should i setup the firewall\nAssistant: probably not necessary since youll just be turning around and opening that port the exception would be if you want to limit incoming connections to a particular ip address or range etc",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.6667770743370056,
+    "support_score": 0.0,
+    "validation_passed": false
+  },
+  {
+    "id": "Q8",
+    "query": "The touchpad on my laptop is not working after installing Ubuntu.",
+    "context": "User: my laptops touchpad has suddenly stopped working is there a terminal command that might get it working again\nAssistant: did you reboot already\n\nUser: i have a macbook 21 and my touchpad is not working after upgrading to 910 does anyone know what might cause this\nAssistant: does any mouse work\n\nUser: wtf all of a sudden i cant switch off the damn touchpad on my lenovo\nAssistant: bios always can and thats the only place you want to do it\n\nUser: hi guys how to switch off the touchpad on a laptop fnfunctional key doesnt work or i have to switch it off in bios setup\nAssistant: you can bind this to your fn key if it produces a keycode look with xev",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.7057691812515259,
+    "support_score": 0.07692307692307693,
+    "validation_passed": false
+  },
+  {
+    "id": "Q9",
+    "query": "How do I reset my forgotten sudo password?",
+    "context": "User: if you accidentally gave root a password how do you change it back to as installed\nAssistant: see\n\nUser: anyway to reset a root password\nAssistant: single user mode or recovery mode\n\nUser: i screwed my sudoers file and i cannot use sudo now how could i fix it\nAssistant: in recovery mode yes",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.7228649854660034,
+    "support_score": 0.2,
+    "validation_passed": false
+  },
+  {
+    "id": "Q10",
+    "query": "My screen is flickering after installing the latest NVIDIA drivers.",
+    "context": "User: my screen flickers big time on ubuntu 64 i cannot increaset the refresh rate coz i donthave the nvidia drivers\nAssistant: im not on 64 but envyng might be of help its an utility which helps you choose the nvidia driver\n\nUser: is there a quick and easy way to update the nvidia drivers in ubuntu right now im not using them but when using them the screen starts flickering and messing up after about 1520 minutes\nAssistant: did you use additional drivers\n\nUser: when i reboot after enabling the nvidia drivers the screen is black any suggestions\nAssistant: log in at another tty look into varlogxorgsumthinlog and see if it says anything about errors",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.7164991497993469,
+    "support_score": 0.3333333333333333,
+    "validation_passed": false
+  },
+  {
+    "id": "Q11",
+    "query": "How can I share a folder with a Windows machine using Samba?",
+    "context": "User: how do i connect to a folder with samba i dont want to mount it permenatly i cant figure out how to access it\nAssistant: using nautilus u can go to location smb\n\nUser: how can i publish a samba share in ubuntu so that windows pcs can access it\nAssistant: modify that then etcinitdsamba restart\n\nUser: hey everyone i just want people on the windows lan to be able to browse my shared folders in my network placesworkgroup computers how do i configure samba for this\nAssistant: if you install swat it will give you a gui to configure samba with nice and easy\n\nUser: what is the linux way to share directories not withfor windows or is the use of samba just the easiest\nAssistant: nfs is an alternative thats supposed to be faster than samba but when connecting with windows machine samba is supposed to be more stable\n\nUser: how do i share a folder on the network from the shell\nAssistant: youll need to edit the etcsambasmbconf and follow the example is very easy",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.7247306108474731,
+    "support_score": 0.25,
+    "validation_passed": false
+  },
+  {
+    "id": "Q12",
+    "query": "The system is running very slowly; how do I find which process is using the CPU?",
+    "context": "User: how can i view how much cpu a process is using\nAssistant: top\n\nUser: how do i see what processes are running\nAssistant: eg ps ef grep chetic\n\nUser: i need to see what processes are taking up cpu time in real time is there something other than task manager that can do this for me\nAssistant: htop\n\nUser: is there a terminal command to view your cpu usage\nAssistant: top htop\n\nUser: how do i see which processes are using the hard disk most heavily now\nAssistant: iotop is what i use not sure if its installed by default",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.7069330811500549,
+    "support_score": 0.14285714285714285,
+    "validation_passed": false
+  },
+  {
+    "id": "Q13",
+    "query": "How do I add a PPA repository for a specific software like OBS Studio?",
+    "context": "User: how can i make my own repository\nAssistant: i think you can use the dpkgscanpackages utility maybe read the apthowto cant remember if it has more info\n\nUser: can someone answer a question please i have 910 installed and am trying to add a ppa to my system the instructions state i am supposed to just type sudo aptaddrepository ppa but there is no option for addrepository for apt any thoughts\nAssistant: like i said that is not the proper command the command is addaptrepository note the order of the words there",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.619354248046875,
+    "support_score": 0.16666666666666666,
+    "validation_passed": false
+  },
+  {
+    "id": "Q14",
+    "query": "Can you help me set up a static IP address on Ubuntu 24.04?",
+    "context": "User: how to setup a static ip address in ubuntu\nAssistant: you need to be always root if using aptget if you build it from source in you dont need to be root\n\nUser: how do you set a static ip in ubuntu\nAssistant: you can do it manually by editing etcnetworkinterfaces\n\nUser: how can i assign my computer a static ip in ubuntu\nAssistant: might see this\n\nUser: how to setup a static ip address i dont have fixed ip please help\nAssistant: i believe in gnome there is preferencesor administrationnetwork",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.8805153369903564,
+    "support_score": 0.14285714285714285,
+    "validation_passed": false
+  },
+  {
+    "id": "Q15",
+    "query": "How do I change the default Java version using update-alternatives?",
+    "context": "User: i dont suppose anyone knows the command to choose the java version\nAssistant: sudo updatejavaalternatives\n\nUser: hello ive installed java5 with synaptic and want to use it but executing java jar uses jre 142 how can i change to the newer version\nAssistant: you need to reset the default java thingy lemme look real quick\n\nUser: how can i make suns java the system default ive copied the files to usrjava and tried modifying the etcjvm file but it does not show up as an alternative when doing updatealternatives configurejava please im sick of launching java apps thru terminal\nAssistant: you dont need to do any manual copying just install the package\n\nUser: how would i go about removing the java jre installed by default and replacing it with suns java jre java 14\nAssistant: then choose the one you want with sudo updatealternatives config java\n\nUser: i have installed sun java6 jre i want it to be default what command was it i had to run to be able to choose with java i want to use\nAssistant: sudo updatealternatives config java jre",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.7345653772354126,
+    "support_score": 0.5,
+    "validation_passed": false
+  },
+  {
+    "id": "Q16",
+    "query": "My external hard drive is not mounting automatically on boot.",
+    "context": "User: how do i automatically mount a drive at startup\nAssistant: you familiar with that\n\nUser: is there a way of preventing an external usb hard drive from mounting upon boot up i tried in etcfstab but ubuntu tried mounting it anyway\nAssistant: my solution should have sorted this\n\nUser: hello can anyone tell me how i can set up an internal drive to mount at boot time\nAssistant: set it up in the etcfstab\n\nUser: can anyone tell me how to make my extra internal hard drive automatically mount when i log in\nAssistant: try\n\nUser: how to automount at boot an ext3 drive\nAssistant: you need to add it to etcfstab\n\nUser: hi i have just set up my external data drive in fstab to mouny in data is there a way to mount in without rebooting\nAssistant: sudo mount a\n\nUser: couple questions how would i go about auto mounting a drive on boot\nAssistant: etcfstab\n\nUser: whats the easiest way to set a drive to auto mount on boot im not realy wanting to edit fstab but can do if there is no other way\nAssistant: go ahead edit fstab is the safer way\n\nUser: hi how can i make my ubuntu to mount automatically in startup\nAssistant: you have to add the device you want to mount to you fstab\n\nUser: when i plug in usb devices they arent always detected automatically only when i reboot is there any command i can use to mount a device automatically\nAssistant: sure sudo mount devsdxn where x is a letter and n is a number corresponding to the device and partition thereon",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.6938706636428833,
+    "support_score": 0.3333333333333333,
+    "validation_passed": false
+  },
+  {
+    "id": "Q17",
+    "query": "How do I check the system logs to troubleshoot a recent application crash?",
+    "context": "User: i keep having to hard boot the computer because it all just stops functioning is there a place to see the logs so i can find out what is causing the crashes\nAssistant: varlogmessages and varlogsyslog are possible places to start looking\n\nUser: where can i investigate the cause for my system crash after i rebooted\nAssistant: you might find some information in varlogmessages if the system crashed in such a way that there were error reports before it died\n\nUser: hi all my x just mysteriously crashed where can i find a crash log and submit it to ubuntu\nAssistant: run ubuntubug xorg\n\nUser: if an error just occured on your computer which log file will you check in the log view\nAssistant: varlogsyslog\n\nUser: hi is there a log over installed applications somewhere\nAssistant: do dpkg l in a terminal",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.7480887174606323,
+    "support_score": 0.5,
+    "validation_passed": false
+  },
+  {
+    "id": "Q18",
+    "query": "What is the command to create a compressed backup of my home directory?",
+    "context": "User: hi i would like to know how do i do a backup of my home\nAssistant: tar it up to a different location",
+    "answer": "I don't have enough specific information in my knowledge base to fully answer this question. Could you provide more details or rephrase your question?",
+    "similarity": 0.6309015154838562,
+    "support_score": 0.2,
+    "validation_passed": false
+  }
+]

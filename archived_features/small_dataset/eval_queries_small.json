@@ -1,0 +1,22 @@
+[
+  {
+    "id": "Q1",
+    "query": "I am not able to install python on my Ubuntu system"
+  },
+  {
+    "id": "Q2",
+    "query": "Ubuntu is not connecting to WiFi"
+  },
+  {
+    "id": "Q3",
+    "query": "My Ubuntu system won't boot after update"
+  },
+  {
+    "id": "Q4",
+    "query": "How do I fix 'Broken Packages' errors when running apt update?"
+  },
+  {
+    "id": "Q5",
+    "query": "The system is running very slowly; how do I find which process is using the CPU?"
+  }
+]

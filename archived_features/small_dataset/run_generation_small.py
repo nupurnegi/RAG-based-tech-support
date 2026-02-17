@@ -1,10 +1,10 @@
 """
-Generation script for RAG system evaluation.
+Generation script for RAG system evaluation - SMALL DATASET VERSION.
 
-This script:
-1. Loads evaluation queries
-2. Runs RAG pipeline for each query
-3. Saves results with context and generated answers
+This script uses only 5 queries to save tokens.
+
+Usage:
+    python evaluation/run_generation_small.py
 """
 
 import json
@@ -17,6 +17,7 @@ from retriever.vector_store import get_vectorstore
 from retriever.retriever import retrieve_context
 from generator.prompt_builder import build_prompt
 from generator.generator_llm import generator_llm
+from generator.response_validator import validate_response
 
 
 def run_rag(query, vectorstore):
@@ -42,18 +43,25 @@ def run_rag(query, vectorstore):
 
     # Generate answer
     answer = generator_llm().generate_text(prompt)
+    
+    # Validate response against context using semantic similarity
+    is_valid, support_score, validated_answer = validate_response(answer, context, threshold=0.5)
+    
+    print(f"  Validation - Support Score: {support_score:.2f}, Valid: {is_valid}")
 
     return {
         "query": query,
         "context": context,
-        "answer": answer,
-        "similarity": similarity
+        "answer": validated_answer,  # Use validated answer
+        "similarity": similarity,
+        "support_score": support_score,
+        "validation_passed": is_valid
     }
 
 
 if __name__ == "__main__":
-    # Load evaluation queries
-    queries_file = "evaluation/data/eval_queries.json"
+    # Load evaluation queries (SMALL VERSION)
+    queries_file = "evaluation/data/eval_queries_small.json"
     
     if not os.path.exists(queries_file):
         print(f"ERROR: {queries_file} not found!")
@@ -63,7 +71,7 @@ if __name__ == "__main__":
     with open(queries_file) as f:
         queries = json.load(f)
     
-    print(f"Found {len(queries)} queries to evaluate")
+    print(f"Found {len(queries)} queries to evaluate (SMALL DATASET)")
     
     # Initialize vector store once
     print("Initializing vector store...")
@@ -86,6 +94,8 @@ if __name__ == "__main__":
             })
             print(f"✓ Generated answer ({len(output['answer'])} chars)")
             print(f"✓ Similarity score: {output['similarity']:.4f}")
+            print(f"✓ Support score: {output['support_score']:.2f}")
+            print(f"✓ Validation passed: {output['validation_passed']}")
         except Exception as e:
             print(f"✗ ERROR: {e}")
             # Add error result
@@ -95,11 +105,13 @@ if __name__ == "__main__":
                 "context": "",
                 "answer": f"ERROR: {str(e)}",
                 "similarity": 0.0,
+                "support_score": 0.0,
+                "validation_passed": False,
                 "error": str(e)
             })
 
     # Save results
-    output_file = "evaluation/results.json"
+    output_file = "evaluation/results_small.json"
     with open(output_file, "w") as f:
         json.dump(results, f, indent=2)
 
@@ -108,4 +120,5 @@ if __name__ == "__main__":
     print(f"{'='*80}")
     print(f"Saved {len(results)} results to {output_file}")
     print(f"\nNext step: Run scoring with:")
-    print(f"  python evaluation/run_scoring.py")
+    print(f"  python evaluation/run_scoring_small.py")
+

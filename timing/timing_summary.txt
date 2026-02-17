@@ -1,0 +1,21 @@
+TIMING SUMMARY FOR DISSERTATION
+================================================================================
+
+Based on 2 CLEAR queries
+
+Average Latency:
+  Intent Analysis:     3.359s
+  Vector Retrieval:    13.142s
+  Response Generation: 4.360s
+  Total:               20.861s
+
+Latency Range:
+  Intent Analysis:     3.176s - 3.541s
+  Vector Retrieval:    13.118s - 13.165s
+  Response Generation: 3.189s - 5.530s
+  Total:               19.896s - 21.825s
+
+Percentage Breakdown:
+  Intent Analysis:     16.1%
+  Vector Retrieval:    63.0%
+  Response Generation: 20.9%
