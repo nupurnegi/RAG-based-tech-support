@@ -123,62 +123,6 @@ python chatbot.py
 
 The Gradio interface will launch at `http://localhost:7860`
 
-## 📁 Project Structure
-
-```
-RAG-based-tech-support/
-├── app/
-│   └── config.py                    # Configuration and credentials
-├── context_expansion/
-│   ├── intent_analyzer.py           # Intent classification logic
-│   ├── intent_llm.py                # LLM for intent analysis
-│   └── intent_prompt.py             # Intent classification prompts
-├── data_prep/
-│   ├── data_loader.py               # Dataset loading and preprocessing
-│   ├── data_embedding.py            # Generate embeddings
-│   ├── insert_data.py               # Insert data into Milvus
-│   └── store_data.py                # Data storage utilities
-├── evaluation/
-│   ├── run_generation.py            # Generate evaluation results
-│   ├── run_generation_small.py      # Small dataset evaluation
-│   ├── run_scoring.py               # Score generated responses
-│   ├── run_scoring_small.py         # Small dataset scoring
-│   ├── data/
-│   │   ├── eval_queries.json        # Full evaluation queries
-│   │   └── eval_queries_small.json  # Small evaluation set
-│   ├── metrics/
-│   │   ├── answer_relevance.py      # Answer relevance scoring
-│   │   ├── context_relevance.py     # Context relevance scoring
-│   │   ├── faithfulness.py          # Faithfulness measurement
-│   │   └── precision_recall.py      # Precision/recall calculation
-│   └── utils/
-│       ├── claim_extractor.py       # Extract claims from responses
-│       ├── llm_judge.py             # LLM-based evaluation
-│       └── number_extractor.py      # Extract numeric scores
-├── generator/
-│   ├── generator_llm.py             # Response generation LLM
-│   └── prompt_builder.py            # Prompt construction with anti-hallucination
-├── retriever/
-│   ├── retriever.py                 # Context retrieval with adaptive thresholds
-│   └── vector_store.py              # Milvus vector store interface
-├── ui/
-│   ├── __init__.py                  # UI module exports
-│   └── gradio_interface.py          # Gradio interface with confidence indicators
-├── utils/
-│   ├── __init__.py                  # Utils module exports
-│   ├── constants.py                 # System constants and thresholds
-│   └── helpers.py                   # Helper functions
-├── archived_features/
-│   └── v3_validation/               # V3 validation experiments (archived)
-├── chatbot.py                       # Main chatbot application (async)
-├── requirements.txt                 # Python dependencies
-├── DEMO_PREPARATION_GUIDE.md        # Guide for successful demo
-├── DISSERTATION_V1_JOURNEY.md       # Complete V1 development documentation
-├── DISSERTATION_POST_V1_EXPLORATION.md  # V2/V3 experiments and analysis
-├── HALLUCINATION_ISSUE_EXPLAINED.md # Detailed hallucination analysis
-└── README.md                        # This file
-```
-
 ## 🎨 Key Features
 
 ### 1. Visual Confidence Indicators
